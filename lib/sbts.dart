@@ -14,6 +14,7 @@ class _SBTSState extends State<SBTS> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: customTheme,
       routes: routes,
     );

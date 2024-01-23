@@ -1,9 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:lottie/lottie.dart';
+import 'package:sbts/view/login.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   static const routeName = "/";
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      Future.delayed(const Duration(seconds: 3), () {
+        Get.offNamed(Login.routeName);
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
