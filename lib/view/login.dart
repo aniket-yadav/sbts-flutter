@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:sbts/utils/images.dart' as icons;
+import 'package:sbts/view/forgot_password.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -62,6 +64,26 @@ class _LoginState extends State<Login> {
               child: ElevatedButton(
                 onPressed: () {},
                 child: const Text("Login"),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "Or",
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Get.toNamed(ForgotPassword.routeName);
+              },
+              child: const Text(
+                "Forgot Password",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
               ),
             )
           ],

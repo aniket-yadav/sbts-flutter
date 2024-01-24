@@ -25,26 +25,26 @@ ThemeData customTheme = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
       splashFactory: NoSplash.splashFactory,
-      foregroundColor: MaterialStateProperty.all(const Color(0xFFFFFFFF)),
+      foregroundColor: MaterialStateProperty.all(const Color(0xFF000000)),
       textStyle: MaterialStateProperty.resolveWith<TextStyle>(
         (Set<MaterialState> states) {
           if (states.contains(MaterialState.pressed)) {
             return const TextStyle(
               fontSize: 14,
               color: Color(0xFF000000),
-              fontFamily: "Poppins",
+              fontFamily: "Lora",
             );
           } else if (states.contains(MaterialState.disabled)) {
             return const TextStyle(
               fontSize: 14,
               color: Color(0xFF000000),
-              fontFamily: "Poppins",
+              fontFamily: "Lora",
             );
           } else {
             return const TextStyle(
               fontSize: 14,
               color: Color(0xFF000000),
-              fontFamily: "Poppins",
+              fontFamily: "Lora",
             );
           }
         },
@@ -78,6 +78,7 @@ ThemeData customTheme = ThemeData(
           side: BorderSide.none,
         ),
       ),
+      foregroundColor: MaterialStateProperty.all(const Color(0xFFFFDF00)),
       splashFactory: NoSplash.splashFactory,
       textStyle: MaterialStateProperty.resolveWith<TextStyle>(
         (Set<MaterialState> states) {
@@ -85,14 +86,14 @@ ThemeData customTheme = ThemeData(
             return TextStyle(
               fontSize: 14,
               color: swatchColor,
-              fontFamily: "Poppins",
+              fontFamily: "Lora",
               fontWeight: FontWeight.w500,
             );
           }
           return TextStyle(
             fontSize: 14,
             color: swatchColor,
-            fontFamily: "Poppins",
+            fontFamily: "Lora",
             fontWeight: FontWeight.w500,
           );
         },
@@ -120,25 +121,26 @@ ThemeData customTheme = ThemeData(
           borderRadius: BorderRadius.circular(18),
         ),
       ),
+      foregroundColor: MaterialStateProperty.all(const Color(0xFFFFDF00)),
       textStyle: MaterialStateProperty.resolveWith<TextStyle>(
         (Set<MaterialState> states) {
           if (states.contains(MaterialState.focused)) {
             return TextStyle(
               fontSize: 14,
               color: swatchColor,
-              fontFamily: "Poppins",
+              fontFamily: "Lora",
             );
           } else if (states.contains(MaterialState.disabled)) {
             return TextStyle(
               fontSize: 14,
               color: swatchColor.shade400,
-              fontFamily: "Poppins",
+              fontFamily: "Lora",
             );
           }
           return const TextStyle(
             fontSize: 14,
             color: Color(0xFF868686),
-            fontFamily: "Poppins",
+            fontFamily: "Lora",
           );
         },
       ),
@@ -160,6 +162,7 @@ ThemeData customTheme = ThemeData(
         color: Colors.white,
         fontSize: 18.0,
         fontWeight: FontWeight.bold,
+        fontFamily: "Lora",
       ),
     ).bodyMedium,
     titleTextStyle: const TextTheme(
@@ -167,6 +170,7 @@ ThemeData customTheme = ThemeData(
         color: Colors.white,
         fontSize: 18.0,
         fontWeight: FontWeight.bold,
+        fontFamily: "Lora",
       ),
     ).titleLarge,
   ),
@@ -179,10 +183,12 @@ ThemeData customTheme = ThemeData(
     labelStyle: const TextStyle(
       color: Color(0xffB3B5B5),
       fontSize: 12.0,
+      fontFamily: "Lora",
     ),
     hintStyle: const TextStyle(
       color: Color(0xffB3B5B5),
       fontSize: 12.0,
+      fontFamily: "Lora",
     ),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(
